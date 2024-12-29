@@ -1,0 +1,19 @@
+/* Correct usage of calc() with units */
+#container {
+  width: calc(100% - 20px);
+  /* Correct: 20px explicitly specifies pixels */
+}
+
+#element {
+  width: calc(50% - 1em);
+  /* Correct: 1em explicitly specifies ems */
+}
+
+/* Incorrect usage of calc() without units */
+#incorrectContainer {
+  width: calc(100% - 20); /* INCORRECT: Missing unit for 20 */
+}
+
+#incorrectElement {
+  width: calc(50% - 1); /* INCORRECT: Missing unit for 1 */
+}
